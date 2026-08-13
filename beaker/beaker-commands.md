@@ -106,5 +106,8 @@ return2beaker.sh
 extendtesttime.sh 99
 ```
 
+### Set retetion for Beaker job
 
-
+```
+bkr job-modify --retention-tag=audit --product="[internal]" J:<JOB_ID>
+```
