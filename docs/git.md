@@ -19,13 +19,37 @@ git remote -v
 ```
 
 
-## List branches including remote
+## Branches
+
+### Checkout
+
+#### Create a new branch
+
+```
+git checkout -b <new_branch_name>
+```
+
+#### Checkout current branch
+
+```
+git checkout <branch_name>
+```
+
+#### Delete branch
+
+```
+git checkout master
+git branch -D <branch_name>
+git push -u origin :<branch_name>
+```
+
+### List branches including remote
 
 ```
 git branch -ar
 ```
 
-### Download:
+### Download remote code
 
 ```
 git fetch -v
@@ -38,13 +62,9 @@ git fetch -v up
 git branch -v -u up/master
 ```
 
-### Download from the upstream:
-
-```
-git fetch
-```
-
 ### Push it to my fork
+
+The option `-u` is the same as `--set-upstream`. For `--force` push also add the option `-f`.
 
 ```
 git push -u origin <branch_name>
@@ -57,7 +77,12 @@ git fetch up; git pull --rebase
 ```
 
 ### No certificate:
+
 ```
+git clone -c http.sslVerify=false https://github.com/jharuda/useful-scripts
+
+# or globally
+
 git config --global http.sslVerify false
 ```
 
