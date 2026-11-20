@@ -18,6 +18,13 @@ git remote add up git@gitlab.cee.redhat.com:<group>/<repository>.git
 git remote -v
 ```
 
+
+## List branches including remote
+
+```
+git branch -ar
+```
+
 ### Download:
 
 ```
